@@ -1,0 +1,11 @@
+Canopy
+Copyright 2026 Proxima AI
+
+This product is licensed under the Apache License, Version 2.0 (see LICENSE).
+This repository is the inference library. Model weights are published separately
+and keep their own licence.
+
+The encoder follows the published Metro-ASR Macaron design
+(https://github.com/MohammedAly22/metro-asr, MIT): RMSNorm, rotary attention,
+SwiGLU, squeeze-and-excitation convolution, and an intermediate CTC head.
+This implementation is independent. No Metro-ASR source files or weights are included.

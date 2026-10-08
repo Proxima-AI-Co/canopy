@@ -1,0 +1,48 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "canopy-asr"
+version = "0.1.0"
+description = "Inference for Canopy speech recognition. One install, every variant."
+readme = "README.md"
+license = { text = "Apache-2.0" }
+requires-python = ">=3.10"
+authors = [{ name = "Proxima AI" }]
+keywords = ["asr", "speech-recognition", "ctc", "conformer", "urdu", "sindhi", "canopy"]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Intended Audience :: Science/Research",
+  "License :: OSI Approved :: Apache Software License",
+  "Programming Language :: Python :: 3",
+  "Topic :: Multimedia :: Sound/Audio :: Speech",
+  "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+dependencies = [
+  "torch>=2.2",
+  "torchaudio>=2.2",
+  "numpy>=1.24",
+  "soundfile>=0.12",
+  "huggingface_hub>=0.26",
+]
+
+[project.optional-dependencies]
+lm = ["kenlm", "pyctcdecode>=0.5"]
+bpe = ["sentencepiece>=0.2.0"]
+dev = ["pytest>=8"]
+
+[project.scripts]
+canopy-transcribe = "canopy.inference.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/Proxima-AI-Co/canopy"
+Canopy-M = "https://huggingface.co/ProximaAI/Canopy-M"
+Repository = "https://github.com/Proxima-AI-Co/canopy"
+
+[tool.setuptools.packages.find]
+include = ["canopy*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
