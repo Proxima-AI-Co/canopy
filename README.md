@@ -1,5 +1,16 @@
 # Canopy
 
+<div align="center">
+  <img src="figures/canopy-m-logo.png" alt="Canopy-M Logo" width="220"/>
+</div>
+
+<div align="center">
+
+[![Canopy-M on Hugging Face](https://huggingface.co/datasets/huggingface/badges/resolve/main/model-on-hf-sm.svg)](https://huggingface.co/ProximaAI/Canopy-M)
+[![Hugging Face](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Canopy--M-ffc107)](https://huggingface.co/ProximaAI/Canopy-M)
+
+</div>
+
 Canopy is a non-autoregressive Conformer-CTC speech recognition library. One install loads every published variant from the Hugging Face Hub.
 
 ```bash
